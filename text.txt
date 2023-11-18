@@ -1,0 +1,36 @@
+
+addstudent db model
+1.namex
+2.regno x
+3.dob x
+4.email
+5.batch
+6.department
+7.gender
+8.tutionfees
+9.examfees
+10.arrear
+11.location
+
+strEXDSJ77y4jBKc
+
+name
+regno
+dob
+email
+batch
+department
+gender
+tutionfees
+examfees
+arrear
+location
+
+add arr and location model
+
+frontend design [✔]
+backend design [✔]
+database [✔]
+api [✔]
+
+
