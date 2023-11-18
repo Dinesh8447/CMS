@@ -12,7 +12,7 @@ require('dotenv').config()
 //middleware
 app.use(BodyParser.json())
 app.use(cors({
-    origin:['https://cms-tkj2-6f4rmurqk-dineshs-projects-ee4833b9.vercel.app'],
+    origin:['https://cms-tkj2-6f4rmurqk-dineshs-projects-ee4833b9.vercel.app/'],
     credentials:true
 }))
 app.use(cookiParser())
