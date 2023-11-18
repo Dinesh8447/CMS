@@ -20,7 +20,7 @@ function App() {
   const dispatch = useDispatch()
   useEffect(() => {
     const fetchapi = async () => {
-      await fetch('http://localhost:4000/get/alldata')
+      await fetch('https://cms-omega-ten.vercel.app/get/alldata')
         .then(data => data.json())
         .then((result) => { dispatch(getuser(result)) })
         .catch(e => console.log(e))
