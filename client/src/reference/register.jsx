@@ -6,7 +6,7 @@ export default function Register() {
     const[password,setpassword] = useState('')
     const handlesubmit = async (e) =>{
         e.preventDefault()
-        axios.post('http://localhost:4000/admin/register',{username,password})
+        axios.post('https://cms-omega-ten.vercel.app/admin/register',{username,password})
         .then(res=>{
             console.log(res)
         })
