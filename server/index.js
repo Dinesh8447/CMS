@@ -12,7 +12,7 @@ require('dotenv').config()
 //middleware
 app.use(BodyParser.json())
 app.use(cors({
-    origin:['http://localhost:5173','https://CMS.app.onrender.com'],
+    origin:['https://cms-omega-ten.vercel.app'],
     credentials:true
 }))
 app.use(cookiParser())
