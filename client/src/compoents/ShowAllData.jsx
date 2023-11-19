@@ -209,7 +209,7 @@ function ShowAllData() {
 
 
   const handledelete = (id) => {
-    const response = fetch(`http://localhost:4000/delete/data/${id}`, {
+    const response = fetch(`https://cms-omega-ten.vercel.app/delete/data/${id}`, {
       method: 'DELETE'
     }).then(() => {
       setloading(false)
