@@ -12,7 +12,7 @@ require('dotenv').config()
 //middleware
 app.use(BodyParser.json())
 app.use(cors({
-    origin:['https://cms-tkj2.vercel.app'],
+    origin:['https://cms-tkj2.vercel.app','https://cms-tkj2-dineshs-projects-ee4833b9.vercel.app'],
     // methods: ["POST", "GET"],
     credentials:true
 }))
