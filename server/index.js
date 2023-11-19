@@ -13,7 +13,7 @@ require('dotenv').config()
 app.use(BodyParser.json())
 app.use(cors({
     origin:['https://cms-tkj2.vercel.app'],
-    // methods: ["POST", "GET"],
+    methods: ["POST", "GET"],
     credentials:true
 }))
 app.use(cookiParser())
