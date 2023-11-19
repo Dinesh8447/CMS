@@ -1,7 +1,7 @@
 import React from 'react'
 import { MapPinIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 import exportFromJSON from 'export-from-json'
- const URL='http://localhost:4000/get/alldata'
+ const URL='https://cms-omega-ten.vercel.app/get/alldata'
 
 export default function ProfileBody({ user }) {
 
