@@ -43,7 +43,7 @@ export default function Body({id}) {
 
 const HandleUpdate = async(e) =>{
 e.preventDefault()
-const response =await fetch(`http://localhost:4000/update/data/${id}`,{
+const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`,{
   method:'PUT',
   body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}),
   headers:{'Content-Type':'application/json'}
