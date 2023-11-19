@@ -30,6 +30,6 @@ mongoose.connect(process.env.MONGODB)
 .catch(e=>console.log(e))
 
 //server listening.....
-app.listen(4000,()=>{
+app.listen(,()=>{
     console.log('running......')
 })
