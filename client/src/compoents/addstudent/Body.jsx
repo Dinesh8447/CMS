@@ -37,7 +37,7 @@ export default function Body() {
 
 const handlepost = async(e) =>{
 e.preventDefault()
-const response =await fetch('http://localhost:4000/create/data',{
+const response =await fetch('https://cms-omega-ten.vercel.app/create/data',{
   method:'POST',
   body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}),
   headers:{'Content-Type':'application/json'}
