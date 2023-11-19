@@ -14,7 +14,7 @@ export default function ProfileCard_Student() {
   }, [])
 
     const fetchapi = async (id) => {
-        await fetch(`http://localhost:4000/get/data/${id}`)
+        await fetch(`https://cms-omega-ten.vercel.app/get/data/${id}`)
         .then(a => a.json())
         .then(data=>
             setdata(data))
