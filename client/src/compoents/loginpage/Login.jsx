@@ -10,7 +10,7 @@ export default function Login() {
     axios.defaults.withCredentials=true
     const handlesubmit = (e) =>{
         e.preventDefault()
-        axios.post('https://cms-omega-ten.vercel.app/admin/login/',{username,password})
+        axios.post('https://cms-omega-ten.vercel.app/admin/login',{username,password})
         .then(res=>{
           if(res.data.status === 'ok'){
             if(res.data.role === 'admin'){
