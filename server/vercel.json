@@ -8,8 +8,4 @@
     "src":"/(.*)",
     "des":"/"
   }],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
-   
   }
