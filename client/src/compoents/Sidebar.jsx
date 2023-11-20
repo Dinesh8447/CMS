@@ -6,6 +6,7 @@ import {HomeIcon,
     UserPlusIcon,
     ArrowLeftOnRectangleIcon,
     UserGroupIcon,
+    UsersIcon,
 } from '@heroicons/react/24/outline'
 const tabs = [
     {
@@ -32,6 +33,12 @@ const tabs = [
         name:'About',
         current:'false',
         link:'/about'
+    },
+     {
+        icon:<UsersIcon/>,
+        name:'Create user',
+        current:'false',
+        link:'/register'
     },
     {
         icon:<ArrowLeftOnRectangleIcon/>,
