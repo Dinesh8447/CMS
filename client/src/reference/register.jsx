@@ -4,11 +4,13 @@ import axios from 'axios'
 export default function Register() {
     const[username,setusername] = useState('')
     const[password,setpassword] = useState('')
+    const[role,setrole] = useState('')
     const handlesubmit = async (e) =>{
         e.preventDefault()
-        axios.post('https://cms-omega-ten.vercel.app/admin/register',{username,password})
+        axios.post('https://cms-omega-ten.vercel.app/admin/register',{username,password,role})
         .then(res=>{
-            console.log(res)
+            alert('register')
+            // console.log(res)
         })
     }
     return (    
@@ -40,6 +42,20 @@ export default function Register() {
                              value={password}
                            />
                       </div>
+
+                       <div>
+                          <label className='text-lg font-medium' htmlFor="">Role</label>
+                          <select
+                          className='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent' 
+                          placeholder='SelectUser'
+                          onChange={e=>setrole(e.target.value)}
+                          value={role}>
+                    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+                  </select>
+                      </div>
+
+                      
                   </div>
                   <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>Login</button>
               </form>
