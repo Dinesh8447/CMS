@@ -79,7 +79,7 @@ const Clear = (e) =>{
 
         <div className=" mr-12  bg-white flex flex-col rounded-xl ">
           {/* Form */}
-          <form onSubmit={handlepost} className='flex flex-col items-center mb-7 scrollbar-thin scrollbar-track-white scrollbar-thumb-black overflow-y-scroll h-[33rem]'>
+          <form onSubmit={handlepost} className='flex flex-col items-center mb-7 scrollbar-thin scrollbar-track-white scrollbar-thumb-black overflow-y-scroll h-[35rem]'>
             <div className='flex py-10 ml-10 space-x-28'>
               {/* coloum-1 */}
               <div className={adminForm2l}>
