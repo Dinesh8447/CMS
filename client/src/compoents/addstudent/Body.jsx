@@ -32,6 +32,7 @@ export default function Body() {
   const [examfees,setexamfees] = useState('')
   const [arrear,setarrear] = useState('')
   const [location,setlocation] = useState('')
+  const [phone,setphone] = useState('')
 
   const dispatch = useDispatch()
 
@@ -39,7 +40,7 @@ const handlepost = async(e) =>{
 e.preventDefault()
 const response =await fetch('https://cms-omega-ten.vercel.app/create/data',{
   method:'POST',
-  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}),
+  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location,phone}),
   headers:{'Content-Type':'application/json'}
 }).then(res=>{
   dispatch(adduser(res.data))
@@ -63,6 +64,7 @@ const Clear = (e) =>{
     setname('')
     setregno('')
     settutionfees('')
+    setphone('')
 }
 
 
@@ -160,6 +162,24 @@ const Clear = (e) =>{
                     onChange={e =>setlocation(e.target.value )}
                   />
                 </div>
+
+{/* phone */}
+                <div className={adminForm3}>
+                  <h1 className={Label}>Phone.No :</h1>
+                  <input
+                    maxLength={10}
+                    required 
+                    placeholder='Phone.No'
+                    className={Input}
+                    type="number"
+                    value={phone}
+                    onChange={e => setphone(e.target.value)}
+                  />
+                </div>
+
+
+
+                  
               </div>
 
 
@@ -170,6 +190,7 @@ const Clear = (e) =>{
                   <h1 className={Label}>Department :</h1>
                   <select
                   value={department}
+                      required
                     onChange={e =>setdepartment(e.target.value )}
                   className={select}>
                     <option selected></option>
@@ -184,6 +205,7 @@ const Clear = (e) =>{
                   <h1 className={Label}>Gender :</h1>
                   <select 
                   value={gender}
+                      required
                     onChange={e =>setgender(e.target.value )}
                   className={select}>
                     <option selected></option>
@@ -196,6 +218,7 @@ const Clear = (e) =>{
                 <div className={adminForm3}>
                   <h1 className={Label}>TuitionFees :</h1>
                   <select
+                      required
                   value={tutionfees}
                     onChange={e =>settutionfees(e.target.value )}
                   className={select}>
@@ -210,6 +233,7 @@ const Clear = (e) =>{
                 <div className={adminForm3}>
                   <h1 className={Label}>ExamFees :</h1>
                   <select
+                      required
                     value={examfees}
                     onChange={e =>setexamfees(e.target.value )}
                    className={select}>
@@ -224,6 +248,7 @@ const Clear = (e) =>{
                 <div className={adminForm3}>
                   <h1 className={Label}>Arrear :</h1>
                   <select 
+                      required
                     value={arrear}
                     onChange={e =>setarrear(e.target.value )}
                   className={select}>
