@@ -7,7 +7,7 @@ const authdatabase = require('../admin/models')
 //password hashing
 const register = async (req, res) => {
 
-    const { username, password } = req.body
+    const { username, password,role } = req.body
     bcryptjs.hash(password, 10)
         .then(hash => {
             authdatabase.create({ username, password: hash })
