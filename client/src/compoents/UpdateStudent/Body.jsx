@@ -49,6 +49,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
   headers:{'Content-Type':'application/json'}
 }).then(res=>{
   dispatch(updateuser({id,name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}))
+  alert('updated')
   navigate('/showdata')
   window.location.reload()
 
