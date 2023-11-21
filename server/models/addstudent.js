@@ -13,7 +13,7 @@ const StudentSchema = new mongoose.Schema({
     arrear: String,
     location: String,
     examfees: String,
-     phone:Number,
+    phone:Number,
 },
     { timestamps: true }
 )
