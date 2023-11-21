@@ -18,8 +18,8 @@ export default function Register() {
   
          <div className='w-full flex lg:w-1/2 bg-slate-100 items-center justify-center'>
               <form action="" onSubmit={handlesubmit} className='bg-white px-10 py-20 rounded-3xl border-2 border-gray-50'>
-                  <h1 className='text-5xl font-semibold'>register</h1>
-                  <p className='font-medium text-lg text-gray-500 mt-4'>Please enter your details.</p>
+                  <h1 className='text-5xl font-semibold'>CreateUser</h1>
+                  <p className='font-medium text-lg text-gray-500 mt-4'>Please enter user details.</p>
                   <div className='mt-8'>
                       <div>
                           <label className='text-lg font-medium' htmlFor="">UserName</label>
@@ -57,7 +57,12 @@ export default function Register() {
 
                       
                   </div>
-                  <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>Login</button>
+                  <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>Register</button>
+              <Link to='/home'>
+                        <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>
+                            Back
+                        </button>
+                    </Link>
               </form>
          </div>
          <div className='bg-gray-200 w-1/2 items-center justify-center hidden lg:flex h-full'>
