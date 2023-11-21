@@ -68,7 +68,7 @@ export default function Register() {
               </form>
          </div>
          <div className='bg-gray-200 w-1/2 items-center justify-center hidden lg:flex h-full'>
-         <div className='w-60 h-60 bg-gradient-to-tr from-blue-500 to-green-600 animate-bounce rounded-full'/>
+         <div className='w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-600 animate-bounce rounded-full'/>
          <div className='w-1/2 h-1/2 bg-blue/10 backdrop-blur-lg  bottom-0 absolute'/>
          </div>
       </div>
