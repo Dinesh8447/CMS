@@ -60,7 +60,7 @@ export default function Login() {
                       
                   </div>
                   <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>
-                      Register
+                      Login
                   </button>
                   
               </form>
