@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 // import Register from './register';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function Login() {
     const[username,setusername] = useState('')
     const[password,setpassword] = useState('')
+    const[role,setrole] = useState('')
     const navigate = useNavigate()
     axios.defaults.withCredentials=true
     const handlesubmit = (e) =>{
         e.preventDefault()
-        axios.post('https://cms-omega-ten.vercel.app/admin/login',{username,password})
+        axios.post('https://cms-omega-ten.vercel.app/admin/login',{username,password,role})
         .then(res=>{
           if(res.data.status === 'ok'){
             if(res.data.role === 'admin'){
@@ -19,6 +21,7 @@ export default function Login() {
               navigate('/showdata/students')
             }
           }else{
+            alert('login faild')
             navigate('/')
           }
             console.log(res.data)
@@ -53,8 +56,29 @@ export default function Login() {
                              value={password}
                            />
                       </div>
+
+                       <div>
+                          <label className='text-lg font-medium' htmlFor="">Role</label>
+                          <select
+                          className='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent' 
+                          placeholder='SelectUser'
+                          onChange={e=>setrole(e.target.value)}
+                          value={role}>
+                    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+                  </select>
+                      </div>
+                      
                   </div>
-                  <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>Login</button>
+                  <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>
+                      Register
+                  </button>
+                  <Link to='/home'>
+                  
+                  <button className='mt-8 w-full text-white hover:scale-[1.01] ease-in-out bg-blue-400 active:scale-[.98] active:duration-75 transition-all py-2 rounded-md font-semibold '>
+                      Back
+                  </button>
+                  </Link>
               </form>
          </div>
                
