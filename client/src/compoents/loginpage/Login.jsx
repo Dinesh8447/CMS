@@ -29,7 +29,7 @@ export default function Login() {
         })
     }
     return (
-      <div style={{backgroundImage:`url(${bgImg5})`,objectFit:'cover'}}  className='flex h-screen w-full'>
+      <div style={{backgroundImage:`url(${bgImg5})`,objectFit:'cover'}}  className='flex bg-cover h-screen w-full'>
   
          <div className='w-full flex lg:w-1/2 items-center justify-center'>
               <form action="" onSubmit={handlesubmit} className='bg-transparent px-10 py-20 rounded-3xl border-2 border-gray-50'>
