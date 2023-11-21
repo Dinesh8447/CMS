@@ -36,9 +36,10 @@ const CreateData = async(req, res) => {
                 tutionfees,
                 examfees,
                 arrear,
-                location
+                location,
+               phone
         } = req.body
-        const response = await database.create({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location})
+        const response = await database.create({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location,phone})
         response.save()
         .then(item=>{
                 res.json(item)
@@ -63,7 +64,8 @@ const UpdateData = async(req, res) => {
                 tutionfees,
                 examfees,
                 location,
-                arrear} = req.body
+                arrear,
+                phone} = req.body
         await database.findByIdAndUpdate(id,{name,
                 regno,
                 dob,
@@ -74,7 +76,8 @@ const UpdateData = async(req, res) => {
                 tutionfees,
                 examfees,
                 arrear,
-                location
+                location,
+                phone                             
         },{new:true})
                 .then(data=>{
                         res.json({message:"updated",data:data})
