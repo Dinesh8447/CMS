@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 // import Register from './register';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import bgImg5 from '../../assets/5.jpg'
+
 
 export default function Login() {
     const[username,setusername] = useState('')
@@ -27,10 +29,10 @@ export default function Login() {
         })
     }
     return (
-      <div className='flex h-screen w-full'>
+      <div style={{backgroundImage:`url(${bgImg5})`,objectFit:'cover'}}  className='flex h-screen w-full'>
   
-         <div className='w-full flex lg:w-1/2 bg-slate-100 items-center justify-center'>
-              <form action="" onSubmit={handlesubmit} className='bg-white px-10 py-20 rounded-3xl border-2 border-gray-50'>
+         <div className='w-full flex lg:w-1/2 items-center justify-center'>
+              <form action="" onSubmit={handlesubmit} className='bg-transparent px-10 py-20 rounded-3xl border-2 border-gray-50'>
                   <h1 className='text-5xl font-semibold'>login</h1>
                   <p className='font-medium text-lg text-gray-500 mt-4'>Please enter your details.</p>
                   <div className='mt-8'>
@@ -65,10 +67,14 @@ export default function Login() {
                   
               </form>
          </div>
-               
-         <div className='bg-gray-200 w-1/2 items-center justify-center hidden lg:flex h-full'>
-         <div className='w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-600 animate-bounce rounded-full'/>
-         <div className='w-1/2 h-1/2 bg-blue/10 backdrop-blur-lg  bottom-0 absolute'/>
+
+          
+         <div className=' w-1/2 items-center justify-center hidden lg:flex h-full'>
+          <div className='text-center  text-4xl font-bold'>
+          <h1>Welcome</h1> 
+          <p>FaceMash University</p> 
+          </div>
+         <div className='w-1/2 h-1/2 bg-blue/10  bottom-0 absolute'/>
          </div>
         
       </div>
