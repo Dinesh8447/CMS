@@ -17,9 +17,11 @@ export default function Login() {
         .then(res=>{
           if(res.data.status === 'ok'){
             if(res.data.role === 'admin'){
+              alert('success')    
               navigate('/home')
             }else if (res.data.role === 'student'){
-              navigate('/showdata/students')
+                alert('success')    
+                navigate('/showdata/students')
             }
           }else{
             alert('login faild')
