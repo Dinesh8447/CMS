@@ -37,7 +37,7 @@ export default function Body({id}) {
   const [examfees,setexamfees] = useState(user.examfees)
   const [arrear,setarrear] = useState(user.arrear)
   const [location,setlocation] = useState(user.location)
-
+  const [phone,setphone] = useState(user.phone)
   // console.log(department)
   
 
@@ -45,10 +45,10 @@ const HandleUpdate = async(e) =>{
 e.preventDefault()
 const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`,{
   method:'PUT',
-  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}),
+  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location,phone}),
   headers:{'Content-Type':'application/json'}
 }).then(res=>{
-  dispatch(updateuser({id,name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}))
+  dispatch(updateuser({id,name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location,phone}))
   alert('updated')
   navigate('/showdata')
   window.location.reload()
@@ -69,7 +69,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
 
         <div className=" mr-10 bg-white flex flex-col rounded-xl ">
           {/* Form */}
-          <form onSubmit={HandleUpdate} className='flex flex-col mb-7 scrollbar-thin scrollbar-track-white scrollbar-thumb-black overflow-y-scroll h-[34rem]'>
+          <form onSubmit={HandleUpdate} className='flex flex-col mb-7 scrollbar-thin scrollbar-track-white scrollbar-thumb-black overflow-y-scroll h-[35rem]'>
             <div className='flex py-11 ml-10 space-x-28'>
               {/* coloum-1 */}
               <div className={adminForm2l}>
@@ -151,6 +151,23 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                   onChange={e =>setlocation(e.target.value )}
                   />
                 </div>
+
+                  {/* phone */}
+                <div className={adminForm3}>
+                  <h1 className={Label}>Phone.No :</h1>
+                  <input
+                    maxLength={10}
+                    required 
+                    placeholder='Phone.No'
+                    className={Input}
+                    type="number"
+                    value={phone}
+                    onChange={e => setphone(e.target.value)}
+                  />
+                </div>
+                
+      
+              
               </div>
               
 
