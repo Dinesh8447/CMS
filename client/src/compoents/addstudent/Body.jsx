@@ -32,7 +32,7 @@ export default function Body() {
   const [examfees,setexamfees] = useState('')
   const [arrear,setarrear] = useState('')
   const [location,setlocation] = useState('')
-  const [phone,setphone] = useState('')
+  // const [phone,setphone] = useState('')
 
   const dispatch = useDispatch()
 
@@ -40,7 +40,7 @@ const handlepost = async(e) =>{
 e.preventDefault()
 const response =await fetch('https://cms-omega-ten.vercel.app/create/data',{
   method:'POST',
-  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location,phone}),
+  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}),
   headers:{'Content-Type':'application/json'}
 }).then(res=>{
   dispatch(adduser(res.data))
@@ -64,7 +64,7 @@ const Clear = (e) =>{
     setname('')
     setregno('')
     settutionfees('')
-    setphone('')
+    // setphone('')
 }
 
 
@@ -164,7 +164,7 @@ const Clear = (e) =>{
                 </div>
 
 {/* phone */}
-                <div className={adminForm3}>
+{/*                 <div className={adminForm3}>
                   <h1 className={Label}>Phone.No :</h1>
                   <input
                     maxLength={10}
@@ -175,7 +175,7 @@ const Clear = (e) =>{
                     value={phone}
                     onChange={e => setphone(e.target.value)}
                   />
-                </div>
+                </div> */}
 
 
 
