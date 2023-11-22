@@ -37,7 +37,7 @@ export default function Body({id}) {
   const [examfees,setexamfees] = useState(user.examfees)
   const [arrear,setarrear] = useState(user.arrear)
   const [location,setlocation] = useState(user.location)
-  const [phone,setphone] = useState(user.phone)
+  // const [phone,setphone] = useState(user.phone)
   // console.log(department)
   
 
@@ -45,10 +45,10 @@ const HandleUpdate = async(e) =>{
 e.preventDefault()
 const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`,{
   method:'PUT',
-  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location,phone}),
+  body:JSON.stringify({name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}),
   headers:{'Content-Type':'application/json'}
 }).then(res=>{
-  dispatch(updateuser({id,name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location,phone}))
+  dispatch(updateuser({id,name,regno,dob,email,batch,department,gender,tutionfees,examfees,arrear,location}))
   alert('updated')
   navigate('/showdata')
   window.location.reload()
@@ -153,7 +153,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                 </div>
 
                   {/* phone */}
-                <div className={adminForm3}>
+{/*                 <div className={adminForm3}>
                   <h1 className={Label}>Phone.No :</h1>
                   <input
                     maxLength={10}
@@ -165,7 +165,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                     onChange={e => setphone(e.target.value)}
                   />
                 </div>
-                
+                 */}
       
               
               </div>
@@ -177,13 +177,13 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                 <div className={adminForm3}>
                   <h1 className={Label}>Department :</h1>
                   <select 
+                  required
                   value={department}
                   onChange={e =>setdepartment(e.target.value )}
                   className={select}>
                     <option selected></option>
                     <option value="MCA">MCA</option>
                     <option value="MBA">MBA</option>
-                    <option value="CS">CS</option>
                   </select>
                 </div>
 
@@ -191,6 +191,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                 <div className={adminForm3}>
                   <h1 className={Label}>Gender :</h1>
                   <select
+                  required
                   value={gender}
                   onChange={e =>setgender(e.target.value )} 
                   className={select}>
@@ -204,6 +205,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                 <div className={adminForm3}>
                   <h1 className={Label}>TuitionFees :</h1>
                   <select 
+                  required
                   value={tutionfees}
                   onChange={e =>settutionfees(e.target.value)}
                   className={select}>
@@ -218,6 +220,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                 <div className={adminForm3}>
                   <h1 className={Label}>ExamFees :</h1>
                   <select 
+                  required
                   value={examfees}
                   onChange={e =>setexamfees(e.target.value )}
                   className={select}>
@@ -231,6 +234,7 @@ const response =await fetch(`https://cms-omega-ten.vercel.app/update/data/${id}`
                 <div className={adminForm3}>
                   <h1 className={Label}>Arrear :</h1>
                   <select
+                  required   
                   value={arrear}
                   onChange={e =>setarrear(e.target.value )}
                   className={select}>
