@@ -86,7 +86,7 @@ export default function ProfileCard() {
                     <p className="mt-8  text-gray-700">D.O.B: {data.dob}</p>
                     <p className="mt-8 text-gray-700">Email: {data.email}</p>
 {/* <p className="mt-8 text-gray-700">phone.No: {data.phone}</p> */}
-                    <p className="mt-2 text-gray-700">University of Computer Science</p>
+                    <p className="mt-2 text-gray-700">Anna University</p>
                 </div>
                 <div className="mt-12 flex flex-col justify-center">
                     <p className="text-gray-700 font-semibold text-center lg:px-16">
