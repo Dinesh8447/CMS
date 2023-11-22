@@ -10,7 +10,7 @@ const register = async (req, res) => {
     const { username, password,role } = req.body
     bcryptjs.hash(password, 10)
         .then(hash => {
-            authdatabase.create({ username, password: hash,role})
+            authdatabase.create({ username, password: hash,role:role})
                 .then(user => res.json('ok'))
         })
         .catch(err => {
